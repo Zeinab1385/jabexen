@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <title>MENU</title>
+    </head>
+    <body class="bg-black text-white min-h-screen flex items-center justify-center overflow-hidden">
+        <div id="particles-js" class="fixed inset-0 z-0"></div>
+
+        <nav class="relative z-10 container mx-auto px-8 py-6">
+            <div class="flex justify-between items-center max-w-5xl mx-auto">
+                <div class="text-4xl font-bold tracking-widest neon text-cyan-300">JABEXEN</div>
+
+                <div class="flex gap-8 text-lg">
+                    <a class="link_hover px-8 py-3 rounded-3xl border border-cyan-400/50 hover:border-cyan-400 transition-all" href="sign.html">
+                        SIGN-UP / SIGN-IN
+                    </a>
+                    <a class="link_hover px-8 py-3 rounded-3xl border border-cyan-400/50 hover:border-cyan-400 transition-all" href="#">SEARCH</a>
+                    <a class="link_hover px-8 py-3 rounded-3xl border border-cyan-400/50 hover:border-cyan-400 transition-all" href="#">CATEGORY</a>
+                </div>
+            </div>
+        </nav>
+
+        <style>
+            .neon { text-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff; }
+            .link_hover:hover { transform: scale(1.05); box-shadow: 0 0 25px #00ffff; }
+        </style>
+    </body>
+</html>

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SIGN</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+            body { font-family: 'Orbitron', sans-serif; }
+            .flip-card { perspective: 1200px; }
+            .flip-card-inner {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+                transform-style: preserve-3d;
+            }
+            .flip-card.is-flipped .flip-card-inner { transform: rotateY(180deg); }
+
+            .flip-card-front, .flip-card-back {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+                border-radius: 28px;
+                box-shadow: 0 0 60px -10px rgb(0 255 255);
+            }
+            .flip-card-front { background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(24px); border: 1px solid rgba(0, 255, 255, 0.3); }
+            .flip-card-back { background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(24px); border: 1px solid rgba(168, 85, 247, 0.3); transform: rotateY(180deg); }
+
+            .neon-cyan { text-shadow: 0 0 20px #22d3ee, 0 0 40px #22d3ee; }
+            .neon-purple { text-shadow: 0 0 20px #c026d3, 0 0 40px #c026d3; }
+
+            input:focus { box-shadow: 0 0 0 4px rgba(34, 211, 238, 0.3); }
+        </style>
+    </head>
+    <body class="bg-black text-white overflow-hidden">
+        <a href="index.html" class="back absolute top-8 left-8 z-50 text-cyan-400 hover:text-white text-2xl font-bold flex items-center gap-3 transition-all hover:scale-110">
+            ← BACK TO MENU
+        </a>
+
+        <div id="particles-js" class="fixed inset-0 z-0"></div>
+
+        <div class="relative z-10 min-h-screen flex items-center justify-center p-6">
+            <div class="w-full max-w-md">
+                <div id="auth-card" class="flip-card mx-auto" style="width: 420px; height: 560px;">
+                    <div id="flip-inner" class="flip-card-inner">
+                        <!-- SIGN IN (front) -->
+                        <div class="flip-card-front p-10 flex flex-col">
+                            <div class="text-center mb-10">
+                                <h1 class="text-5xl font-bold neon-cyan">SIGN IN</h1>
+                                <p class="text-cyan-300/70 mt-3 tracking-widest">WELCOME BACK TO THE MATRIX</p>
+                            </div>
+                            <form id="signin-form" class="flex-1 flex flex-col gap-6">
+                                <input name="username" type="text" placeholder="USERNAME" required
+                                       class="bg-white/10 border border-cyan-400/50 focus:border-cyan-400 rounded-3xl px-8 py-5 text-lg placeholder:text-cyan-200/60 focus:outline-none transition-all">
+                                <div>
+                                    <input name="password" type="password" placeholder="PASSWORD" required
+                                           class="bg-white/10 border border-cyan-400/50 focus:border-cyan-400 rounded-3xl px-8 py-5 text-lg placeholder:text-cyan-200/60 focus:outline-none transition-all w-full">
+                                    <a href="#" class="text-cyan-400 text-sm mt-3 inline-block hover:underline">Forget Password?</a>
+                                </div>
+                                <input type="submit" value="ACCESS ACCOUNT"
+                                       class="link_hover mt-auto bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-blue-500 hover:to-cyan-400 text-black font-bold py-5 rounded-3xl text-2xl transition-all shadow-2xl shadow-cyan-500/60">
+                            </form>
+                            <button id="to-signup" class="mt-8 text-cyan-300 hover:text-white transition">DON'T HAVE ACCOUNT? <span class="font-bold">SIGN UP</span></button>
+                        </div>
+
+                        <!-- SIGN UP (back) -->
+                        <div class="flip-card-back p-10 flex flex-col">
+                            <div class="text-center mb-10">
+                                <h1 class="text-5xl font-bold neon-purple">SIGN UP</h1>
+                                <p class="text-purple-300/70 mt-3 tracking-widest">JOIN THE FUTURE</p>
+                            </div>
+                            <form id="signup-form" class="flex-1 flex flex-col gap-6">
+                                <input name="email" type="email" placeholder="EMAIL" required
+                                       class="bg-white/10 border border-purple-400/50 focus:border-purple-400 rounded-3xl px-8 py-5 text-lg placeholder:text-purple-200/60 focus:outline-none transition-all">
+                                <input name="username" type="text" placeholder="USERNAME" required
+                                       class="bg-white/10 border border-purple-400/50 focus:border-purple-400 rounded-3xl px-8 py-5 text-lg placeholder:text-purple-200/60 focus:outline-none transition-all">
+                                <input name="password" type="password" placeholder="PASSWORD" required
+                                       class="bg-white/10 border border-purple-400/50 focus:border-purple-400 rounded-3xl px-8 py-5 text-lg placeholder:text-purple-200/60 focus:outline-none transition-all">
+                                <input type="submit" value="CREATE ACCOUNT"
+                                       class="link_hover mt-auto bg-gradient-to-r from-purple-500 to-cyan-400 hover:from-cyan-400 hover:to-purple-500 text-black font-bold py-5 rounded-3xl text-2xl transition-all shadow-2xl shadow-purple-500/60">
+                            </form>
+                            <button id="to-signin" class="mt-8 text-purple-300 hover:text-white transition">ALREADY HAVE ACCOUNT? <span class="font-bold">SIGN IN</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="../assets/js/sign-animation.js"></script>
+    </body>
+</html>
