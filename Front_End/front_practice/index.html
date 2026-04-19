@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jabexen | کاوشگر شغل هوشمند</title>
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="bg-canvas"></canvas>
+
+    <div class="ui-wrapper">
+        <div class="search-container">
+            <div class="brand-header">
+                <span class="logo-icon">J</span>
+                <h1 class="brand-name">JABEXEN</h1>
+            </div>
+            <p class="tagline">آینده شغلی خود را در شبکه کشف کنید</p>
+
+            <div class="input-group">
+                <input type="text" id="job-search" placeholder="عنوان شغلی، مهارت یا شرکت...">
+                <button class="search-btn">
+                    <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                </button>
+                <div class="scan-line"></div>
+            </div>
+
+            <div class="status-bar">
+                <span>SYSTEM: <span class="status-online">ONLINE</span></span>
+                <span class="separator">|</span>
+                <span>DATA NODES: 14,582</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
