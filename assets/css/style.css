@@ -1,0 +1,86 @@
+body {
+    background-color: rgb(11, 13, 39);
+    background-image: radial-gradient(
+        circle,
+        rgba(40, 45, 70, 0.8) 0%,
+        rgba(11, 13, 39, 1) 70%
+    );
+    margin: 0;
+    height: 100vh;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    width: 80%;
+    margin: auto 0;
+    display: flex;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+nav > main.container {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav > main > div > a {
+    text-decoration: none;
+    color: white;
+}
+
+nav > main > div {
+    background-color: unset;
+    text-decoration: none;
+    border-color: #999999;
+    padding: 5px 5px 5px 5px;
+}
+
+.right_nav_box {
+    display: flex;
+    gap: 15px;
+    justify-content: end;
+}
+
+.left_nav_box {
+    display: flex;
+}
+
+.left_nav_box,
+.right_nav_box {
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    gap: 15px;
+}
+
+.left_nav_box > a,
+.right_nav_box > a {
+    padding: 10px 25px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    text-align: center;
+}
+
+.left_nav_box > a:hover,
+.right_nav_box > a:hover {
+    background-color: #6a1bff;
+    border-color: #6a1bff;
+    color: white;
+    box-shadow: 0 5px 15px rgba(106, 27, 255, 0.4);
+}
