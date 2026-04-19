@@ -1,0 +1,124 @@
+/* layout.css */
+
+/* 1. تنظیمات پایه و متغیرهای رنگی */
+:root {
+    --bg-dark: #020617;
+    --primary-neon: #06b6d4;
+    --secondary-glow: #0891b2;
+    --text-main: #f1f5f9;
+    --text-muted: #94a3b8;
+    --glass-bg: rgba(15, 23, 42, 0.6);
+    --glass-border: rgba(6, 182, 212, 0.3);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--bg-dark);
+    font-family: Vazirmatn, sans-serif;
+    color: var(--text-main);
+    /* اجازه اسکرول عمودی در صورت زیاد بودن محتوا */
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* 2. تنظیمات بوم پس‌زمینه (ثابت در کل صفحه) */
+#bg-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* فرستادن به پشت همه المان‌ها */
+    pointer-events: none;
+}
+
+/* 3. نگهدارنده اصلی محتوا (Wrapper) */
+.page-wrapper {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* 4. استایل باکس‌های شیشه‌ای (Glassmorphism) */
+.content-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 40px;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 0 30px rgba(6, 182, 212, 0.15);
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/* 5. استایل‌های برندینگ و تایپوگرافی */
+.brand-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.logo-icon {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--bg-dark);
+    background-color: var(--primary-neon);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 0 15px var(--primary-neon);
+}
+
+.brand-name {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin: 0;
+    text-shadow: 0 0 10px var(--secondary-glow);
+}
+
+.tagline {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+}
+
+/* 6. دکمه‌ها و المان‌های تعاملی */
+.custom-btn {
+    background: var(--primary-neon);
+    color: var(--bg-dark);
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-family: Vazirmatn;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.custom-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px var(--primary-neon);
+}
