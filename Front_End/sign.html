@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/assets/css/sign_style.css" />
+        <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+            crossorigin="anonymous"
+        />
+        <title>SIGN</title>
+    </head>
+    <body>
+        <a class="back" id="btn-back"> Back</a>
+        <div class="sign-form">
+            <section class="btns">
+                <button id="btn-signup">SIGN-UP</button>
+                <button id="btn-signin">SIGN-IN</button>
+            </section>
+
+            <div
+                id="error-message"
+                style="color: red; margin-bottom: 15px"
+            ></div>
+
+            <main id="signup">
+                <div class="SIGN-UP">
+                    <form class="SIGN-UP-form" id="signup-form">
+                        <div class="input_input">
+                            <label for="email"
+                                >Email<span class="required">*</span></label
+                            >
+                            <input
+                                type="text"
+                                id="email"
+                                name="email"
+                                placeholder="example@mail.com"
+                                required
+                            />
+                        </div>
+
+                        <div class="input_input">
+                            <label for="phone">Phone</label>
+                            <input
+                                type="number"
+                                id="phone"
+                                name="phone"
+                                placeholder="09xxxxxxxxx"
+                            />
+                        </div>
+
+                        <div class="input_input">
+                            <label for="username"
+                                >Username<span class="required">*</span></label
+                            >
+                            <input
+                                type="text"
+                                id="username"
+                                name="username"
+                                placeholder="Enter your username"
+                                required
+                            />
+                        </div>
+
+                        <div class="input_input">
+                            <label for="password"
+                                >Password<span class="required">*</span></label
+                            >
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Enter your password"
+                                required
+                            />
+                        </div>
+
+                        <input
+                            class="link_hover"
+                            type="submit"
+                            value="Create Account"
+                        />
+                    </form>
+                </div>
+            </main>
+
+            <main id="signin" style="display: none">
+                <div class="SIGN-UP">
+                    <form class="SIGN-UP-form" action="">
+                        <div class="input_input">
+                            <label for="username"
+                                >Username<span class="required">*</span></label
+                            >
+                            <input
+                                type="text"
+                                id="username"
+                                name="username"
+                                placeholder="Enter your username"
+                                required
+                            />
+                        </div>
+
+                        <div class="input_input">
+                            <label for="password"
+                                >Password<span class="required">*</span></label
+                            >
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Enter your password"
+                                required
+                            />
+                            <a href="">Forget Password / Username</a>
+                        </div>
+                        <span>
+                            <input type="text" />
+                        </span>
+                        <input
+                            class="link_hover"
+                            type="submit"
+                            value="Access Account"
+                        />
+                    </form>
+                </div>
+            </main>
+
+            <main id="validation" style="display: none">
+                <div class="validation-box">
+                    <label>
+                        Validation code has been sent <br />
+                        Please enter the code below..
+                    </label>
+
+                    <div class="code-inputs">
+                        <input maxlength="1" />
+                        <input maxlength="1" />
+                        <input maxlength="1" />
+                        <input maxlength="1" />
+                        <input maxlength="1" />
+                    </div>
+
+                    <input
+                        class="link_hover"
+                        type="submit"
+                        value="Get Started"
+                    />
+                </div>
+            </main>
+
+            <main id="get_forget_password" style="display: none">
+                <div class="SIGN-UP">
+                    <form class="SIGN-UP-form" action="">
+                        <div class="input_input">
+                            <label for="email"
+                                >Email<span class="required">*</span></label
+                            >
+                            <input
+                                type="text"
+                                id="email"
+                                name="email"
+                                placeholder="Enter your email"
+                                required
+                            />
+                        </div>
+                        <input class="link_hover" type="submit" value="Forget Username" />
+                        <input class="link_hover" type="submit" value="Forget Password" />
+                        <input class="link_hover" type="submit" value="Next" />
+                    </form>
+                </div>
+            </main>
+
+            <main id="set_forget_password" style="display: none">
+                <div class="SIGN-UP">
+                    <form class="SIGN-UP-form" action="">
+                        <div class="input_input">
+                            <label for="newpassword"
+                                > New Password<span class="required">*</span></label
+                            >
+                            <input
+                                type="text"
+                                id="newpassword"
+                                name="newpassword"
+                                placeholder="Enter your new password"
+                                required
+                            />
+                        </div>
+
+                        <div class="input_input">
+                            <label for="confirmnewpassword"
+                                >Confirm New Password<span class="required">*</span></label
+                            >
+                            <input
+                                type="password"
+                                id="confirmnewpassword"
+                                name="confirmnewpassword"
+                                placeholder="Confirm your new password"
+                                required
+                            />
+                        </div>
+                        <span>
+                            <input type="text" />
+                        </span>
+                        <input
+                            class="link_hover"
+                            type="submit"
+                            value="Reset Password"
+                        />
+                    </form>
+                </div>
+            </main>
+
+            <main id="accept_password" style="display: none">
+                <div class="validation-box">
+                    <label>
+                        New password has been saved <br />
+                        Back to the sign-up in seconds
+                    </label>
+                </div>
+            </main>
+        </div>
+
+        <script src="../assets/js/sign-animation.js"></script>
+        <script src="../assets/js/sign-up-validation.js"></script>
+    </body>
+</html>
